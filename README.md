@@ -34,6 +34,9 @@ This project uses Mininet to simulate a simple network topology. It monitors the
    ```
 
 ## 📸 Output
+<img width="1267" height="505" alt="image" src="https://github.com/user-attachments/assets/0390b578-7ff7-4a22-bb75-e7bd281108a3" />
+<img width="1086" height="212" alt="image" src="https://github.com/user-attachments/assets/7e812d6b-6906-4f3f-82e9-b74c35f95a01" />
+
 
 * Initial topology is displayed
 * After adding a new link → shows **"Link Added"**
