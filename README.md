@@ -1,49 +1,118 @@
-# 🚀 Topology Change Detector (Mininet)
+# 🚀 Topology Change Detector
 
-## 📌 Project Title
+## 📌 Project Overview
 
-Topology Change Detector
+Topology Change Detector is a Computer Networks project that detects dynamic changes in network topology using Mininet simulation and Python visualization.
+
+The project monitors link changes such as addition or removal of connections between nodes and updates the topology accordingly.
+
+---
 
 ## 🎯 Objective
 
-To detect changes in network topology dynamically.
+* Detect changes in network topology dynamically
+* Monitor switch/link events
+* Update topology map
+* Display topology changes
+* Maintain simple log updates
 
-## 🧠 Description
+---
 
-This project uses Mininet to simulate a simple network topology. It monitors the connections (links) between devices and detects any changes such as addition or removal of links. The detected changes are displayed in the terminal.
-
-## ✨ Features
-
-* 🔗 Detects link addition
-* ❌ Detects link removal
-* 📊 Displays current topology
-* ⚡ Simple and easy simulation using Mininet
-
-## 🛠️ Tools Used
+## 🛠️ Technologies Used
 
 * 🐍 Python
 * 🌐 Mininet
+* 📊 NetworkX
+* 📈 Matplotlib
+
+---
+
+## ⚙️ How It Works
+
+1. Creates an initial network topology
+2. Displays nodes and links in graph format
+3. Simulates topology changes:
+
+   * Link Added
+   * Link Removed
+4. Updates graph after every change
+5. Logs topology updates in terminal / file
+
+---
 
 ## ▶️ How to Run
 
-1. Open terminal
-2. Run the file:
+### Run Python Visualization
 
-   ```
-   sudo python3 topo_detect.py
-   ```
+```bash
+python3 topology_detector.py
+```
+
+### Run Mininet Simulation
+
+```bash
+sudo mn --topo single,3
+```
+
+### Test Connectivity
+
+```bash
+pingall
+```
+
+### Simulate Link Failure
+
+```bash
+link s1 h3 down
+```
+
+### Restore Link
+
+```bash
+link s1 h3 up
+```
+
+---
 
 ## 📸 Output
-<img width="1267" height="505" alt="image" src="https://github.com/user-attachments/assets/0390b578-7ff7-4a22-bb75-e7bd281108a3" />
-<img width="1086" height="212" alt="image" src="https://github.com/user-attachments/assets/7e812d6b-6906-4f3f-82e9-b74c35f95a01" />
 
+* Initial topology graph
+* Updated topology after link addition
+* Updated topology after link removal
+* Connectivity results using `pingall`
 
-* Initial topology is displayed
-* After adding a new link → shows **"Link Added"**
-* After removing a link → shows **"Link Removed"**
+---
 
-## 📈 Conclusion
+## 💡 Sample Results
 
-This project demonstrates how topology changes can be detected in a network using Mininet. It is a basic simulation that can be extended for real-time network monitoring systems.
+* Normal State → `0% dropped`
+* Link Failure → `66% dropped`
+* Restored State → `0% dropped`
 
-⭐ Simple project but shows core networking concept clearly.
+---
+
+## 📚 Learning Outcomes
+
+* Understanding of network topology
+* Network simulation using Mininet
+* Dynamic link failure testing
+* Graph-based visualization using Python
+
+---
+
+## 🔮 Future Scope
+
+* Real-time network monitoring
+* GUI dashboard
+* Alert system for failures
+* SDN controller integration
+
+---
+
+## 👨‍💻 Author
+
+Darshil085
+
+---
+
+⭐ A simple and effective project for understanding dynamic network topology changes.
